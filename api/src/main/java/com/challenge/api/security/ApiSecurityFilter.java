@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class ApiSecurityFilter implements Filter {
 
     private static final String API_KEY_HEADER = "X-API-Key";
-    private static final String VALID_API_KEY = "rq-secret-key-2024";
+    private static final String VALID_API_KEY = System.getenv().getOrDefault("API_KEY", "rq-secret-key-2024");
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)

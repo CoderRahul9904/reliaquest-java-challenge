@@ -1,1 +1,2 @@
 spring.application.name: entry-level-java-challenge
+# API key is configured via API_KEY environment variable
